@@ -13,8 +13,14 @@ module.exports = {
 			title: 'Output Management'
 		})
 	],
+	devtool: 'inline-source-map',
+	devServer: {
+		contentBase: './dist'
+	},
 	output: {
 		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
+		publicPath: '/'
+
 	}
 };
